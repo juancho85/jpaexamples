@@ -1,22 +1,24 @@
-package jds.jpaexample;
+package jds.jpaexample.simpleoperations;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class FindEmployee {
+public class DeleteEmployee {
 
     public static void main( String[ ] args ) {
 	   
 	      EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "JPA" );
 	      
 	      EntityManager entitymanager = emfactory.createEntityManager( );
-
+	      entitymanager.getTransaction( ).begin( );
+	      
 	      Employee employee = entitymanager.find( Employee.class, 1 );
+	      entitymanager.remove(employee);
 
-	      System.out.println("employee ID = " + employee.getEid( ));
-	      System.out.println("employee NAME = " + employee.getEname( ));
-	      System.out.println("employee SALARY = " + employee.getSalary( ));
-	      System.out.println("employee DESIGNATION = " + employee.getDeg( ));
+	      entitymanager.getTransaction( ).commit( );
+
+	      entitymanager.close( );
+	      emfactory.close( );
 	   }
 }

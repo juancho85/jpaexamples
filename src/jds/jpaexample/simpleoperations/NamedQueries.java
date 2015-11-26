@@ -1,4 +1,4 @@
-package jds.jpaexample;
+package jds.jpaexample.simpleoperations;
 
 import java.util.List;
 

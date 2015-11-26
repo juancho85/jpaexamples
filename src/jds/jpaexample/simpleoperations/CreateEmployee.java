@@ -1,10 +1,10 @@
-package jds.jpaexample;
+package jds.jpaexample.simpleoperations;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class DeleteEmployee {
+public class CreateEmployee {
 
     public static void main( String[ ] args ) {
 	   
@@ -12,10 +12,14 @@ public class DeleteEmployee {
 	      
 	      EntityManager entitymanager = emfactory.createEntityManager( );
 	      entitymanager.getTransaction( ).begin( );
-	      
-	      Employee employee = entitymanager.find( Employee.class, 1 );
-	      entitymanager.remove(employee);
 
+	      Employee employee = new Employee( ); 
+	      employee.setEid( 1 );
+	      employee.setEname( "Sánchez" );
+	      employee.setSalary( 40000 );
+	      employee.setDeg( "Software developer" );
+	      
+	      entitymanager.persist( employee );
 	      entitymanager.getTransaction( ).commit( );
 
 	      entitymanager.close( );

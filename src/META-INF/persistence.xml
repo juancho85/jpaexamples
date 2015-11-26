@@ -5,6 +5,9 @@
 		<class>jds.jpaexample.inheritance.singletable.Staff</class>
 		<class>jds.jpaexample.inheritance.singletable.TeachingStaff</class>
 		<class>jds.jpaexample.inheritance.singletable.NonTeachingStaff</class>
+		<class>jds.jpaexample.inheritance.joinedtable.Staff</class>
+		<class>jds.jpaexample.inheritance.joinedtable.TeachingStaff</class>
+		<class>jds.jpaexample.inheritance.joinedtable.NonTeachingStaff</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpaexample"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>

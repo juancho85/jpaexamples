@@ -8,6 +8,15 @@
 		<class>jds.jpaexample.inheritance.joinedtable.Staff</class>
 		<class>jds.jpaexample.inheritance.joinedtable.TeachingStaff</class>
 		<class>jds.jpaexample.inheritance.joinedtable.NonTeachingStaff</class>
+		<class>jds.jpaexample.inheritance.perclass.Staff</class>
+		<class>jds.jpaexample.inheritance.perclass.TeachingStaff</class>
+		<class>jds.jpaexample.inheritance.perclass.NonTeachingStaff</class>
+		<class>jds.jpaexample.relationship.manytoone.Department</class>
+		<class>jds.jpaexample.relationship.manytoone.Employee</class>
+		<class>jds.jpaexample.relationship.onetomany.Employee</class>
+		<class>jds.jpaexample.relationship.onetomany.Department</class>
+		<class>jds.jpaexample.relationship.onetoone.Department</class>
+		<class>jds.jpaexample.relationship.onetoone.Employee</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpaexample"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
